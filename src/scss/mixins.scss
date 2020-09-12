@@ -1,0 +1,244 @@
+@mixin text__lg__bold {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  color: $primaryColor;
+  letter-spacing: 0px;
+}
+
+@mixin text__lg {
+  font-size: 2rem;
+  font-style: medium;
+  font-weight: 400;
+  color: $primaryColor;
+  letter-spacing: 0px;
+}
+
+@mixin text__md {
+  font-size: 1.3rem;
+  font-style: medium;
+  color: $secondaryColor;
+  letter-spacing: 0px;
+}
+
+@mixin text__sm__bold {
+  font-size: 1rem;
+  font-style: 600;
+  color: $secondaryColor;
+  letter-spacing: 0px;
+}
+
+@mixin text__sm {
+  font-size: .8rem;
+  font-style: normal;
+  color: $secondaryColor;
+  letter-spacing: 0px;
+}
+
+@mixin text__xm {
+  font-size: 1rem;
+  font-style: normal;
+  color: $secondaryColor;
+  letter-spacing: 0px;
+}
+
+@mixin btn__login {
+  width: 110px;
+  height: 38px;
+  border: 2px solid $btnColor;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  @include text__sm();
+  text-align: center;
+  color: $btnColor;
+}
+
+@mixin btn__sign {
+  width: 110px;
+  height: 38px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: $primaryColor;
+  position: relative;
+  transition: .7s linear;
+  font-size: .6rem;
+  color: $btnColor;
+  cursor: pointer;
+
+  a {
+    color: $btnColor;
+  }
+  &:hover {
+    transform: scale(1);
+
+    span {
+      transform: translatex(-95%);
+      transition-delay: .3s;
+    }
+
+    a {
+      color: $btnColor;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  span {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    background: $btnColor;
+    border-radius: 50px;
+    color: $primaryColor;
+    text-align: center;
+    line-height: 34px;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: .6s linear;
+  }
+}
+
+@mixin btn__sm {
+  width: 150px;
+  height: 54px;
+  border: 2px solid $primaryColor;
+  border-radius: 30px;
+  background: $primaryColor;
+  opacity: 1;
+  padding: .400rem .90rem;
+  @include text__sm();
+  text-align: center;
+  color: $whiteColor;
+}
+
+@mixin btn__md {
+  width: 14.6rem;
+  height: 4.2rem;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 7px 9px 15px #00000029;
+  border-radius: 39px;
+  opacity: 1;
+  padding: .400rem .85rem;
+}
+
+@mixin btn__lg {
+  width: 1590px;
+  height: 594px;
+  background: $primaryColor 0% 0% no-repeat padding-box;
+  box-shadow: 6px 8px 20px #19204D0D;
+  padding: .400rem .85rem;
+
+}
+
+@mixin btn__xl {
+  width: 260px;
+  height: 63px;
+  background: $primaryColor 0% 0% no-repeat padding-box;
+  box-shadow: 6px 8px 20px #19204D0D;
+  padding: .400rem .85rem;
+  border-radius: 50px;
+}
+
+@mixin input {
+  width: 100%;
+  height: 60px;
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+@mixin sm__box {
+  width: 5rem;
+  height: 4.4rem;
+  background: $btnColor 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  z-index: 2;
+  position: absolute;
+}
+
+@mixin md__box {
+  max-width: 25rem;
+  height: 42rem;
+  background: #19204d 0% 0% no-repeat padding-box;
+  box-shadow: 12px 14px 20px #19204d24;
+  border-radius: 15px;
+  opacity: 1;
+  align-self: center;
+  z-index: 1;
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  color: #fff;
+  padding: 3rem 3rem;
+}
+
+@mixin lg__box {
+  width: 8rem;
+  height: 46rem;
+  background: #fba91d 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 22rem;
+}
+
+@mixin mediaSm {
+  @media screen and (min-width: 300px) and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 505px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin altmediaXm {
+  @media screen and (min-width: 500px) and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin altmediaLg {
+  @media screen and (min-width: 960px) and (max-width: 1171px) {
+    @content;
+  }
+}
