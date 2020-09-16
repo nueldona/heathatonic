@@ -1,47 +1,70 @@
 <template>
   <div id="layout">
-    <transition-group name="fade" tag="div">
-      <div v-for="i in [currentIndex]" :key="i"></div>
-    </transition-group>
-    <section class="main">
-      <section class="header">
-        <p>Donate today</p>
-        <!-- <a href="#" class="prev" @click="prev">&#10094; Previous</a>
-        <a href="#" class="prev" @click="next">&#10095; Next</a> -->
-      </section>
-      <section class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="#" class="card-img" alt="..." />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+    <transition-group name="slide-in" tag="div">
+      <div v-for="i in [currentIndex]" :key="i">
+        <section class="main">
+          <section class="header">
+            <p>Donate today</p>
+            <p>
+              <a href="#" class="prev" @click="prev">&#10094; Prev</a>
+              <a href="#" class="prev" @click="next">Next &#10095; </a>
+            </p>
+          </section>
+          <section class="card" v-for="card in cards" v-bind:key="card.id">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <img
+                  :src="require('@/assets/' + card.img)"
+                  class="card-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title">{{ card.title }}</h5>
+                  <p class="card-text">
+                    <small class="text-small">{{ card.smallText }}</small>
+                  </p>
+                  <p class="card-text srt">
+                    {{ card.text }}
+                  </p>
+                  <button class="btn btn__xm">{{ card.btn }}</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </section>
+          </section>
+        </section>
+      </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
+let photos = {
+  img__1: require("@/assets/NoPath - Copy (14).png"),
+};
 export default {
   name: "Slider",
   data() {
     return {
-      images: [
-        require("@/assets/NoPath - Copy (14).png"),
-        require("@/assets/NoPath - Copy (14).png"),
-        require("@/assets/NoPath - Copy (14).png"),
+      img__1: true,
+      cards: [
+        {
+          id: 1,
+          img: "NoPath - Copy (14).png",
+          title: "Dakwa Primary health center",
+          smallText: "need",
+          text: "Hospital beds",
+          btn: "Donate",
+        },
+        // {
+        //   id: 2,
+        //   img: "NoPath - Copy (14).png",
+        //   title: "Dakwa Primary health center",
+        //   smallText: "need",
+        //   text: "Hospital beds",
+        //   btn: "Donate",
+        // },
       ],
       timer: null,
       currentIndex: 0,
@@ -54,7 +77,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 4000);
+      this.timer = setInterval(this.next, 5000);
     },
 
     next: function() {
@@ -66,8 +89,11 @@ export default {
   },
 
   computed: {
+    photos() {
+      return photos;
+    },
     currentImg: function() {
-      return this.images[Math.abs(this.currentIndex) % this.images.length];
+      return this.cards[Math.abs(this.currentIndex) % this.cards.length];
     },
   },
 };
@@ -95,43 +121,140 @@ export default {
 }
 
 img {
-  height: 600px;
-  width: 100%;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+  height: 110px;
+  width: 110px;
+  max-width: 100%;
 }
 
 .main {
-  max-width: 574px;
-  height: 100%;
+  width: 480px;
+  overflow: hidden;
   border: 2px dashed $btnColor;
   border-radius: 10px;
+  margin-top: 1.5rem;
 
   .header {
-    padding: 1.3rem 2rem;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
     p {
       @include text__md();
+      font-size: 1rem;
       // color: #fff;
       margin-bottom: 0rem;
+    }
+    a {
+      text-decoration: none;
+      @include text__sm();
+      margin-left: 1.7rem;
+      opacity: 7;
+      &:active,
+      &:hover {
+        color: $primaryColor;
+        opacity: 1;
+      }
+    }
+  }
+  .card {
+    padding: 0.5rem 1rem;
+    // height: 120px;
+    border-top: 2px dashed $btnColor;
+    .card-img {
+      margin: 1rem 0rem;
+      width: 90px;
+      height: 90px;
+    }
+    .card-body {
+      padding: 0rem;
+      .card-title {
+        @include text__md();
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        color: #000000;
+        margin-top: 1.2rem;
+      }
+      .text-small {
+        @include text__sm();
+        color: $btnColor;
+      }
+
+      p {
+        margin-bottom: 0.3rem;
+      }
+
+      .srt {
+        margin-bottom: 0rem;
+      }
+
+      .btn__xm {
+        float: right;
+        background: $btnColor;
+        font-size: 0.7rem;
+        font-weight: 500;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+// small mobile
+@include mediaxm() {
+  .main {
+    width: 26.75rem;
+    .header {
+      padding: 0.8rem 1.5rem;
+    }
+    .card {
+      padding: 0.5rem 0.7rem;
+      .card-img {
+        margin: 1.5rem 0rem;
+      }
+      .card-body {
+        padding: 0.5rem 0.5rem;
+        .card-title {
+          @include text__md();
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// small desktop
+@include altmediaLg() {
+  .main {
+    float: right;
+    .header {
+    }
+  }
+}
+
+// desktop
+@include mediaXl() {
+  .main {
+    float: right;
+    .header {
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      p {
+        @include text__md();
+        font-size: 1rem;
+        // color: #fff;
+        margin-bottom: 0rem;
+      }
+      a {
+        text-decoration: none;
+        @include text__sm();
+        margin-left: 1.7rem;
+        opacity: 7;
+        &:active,
+        &:hover {
+          color: $primaryColor;
+          opacity: 1;
+        }
+      }
     }
   }
 }

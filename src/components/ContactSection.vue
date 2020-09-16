@@ -96,7 +96,7 @@
       </section>
     </div>
     <div class="text-center">
-      <router-link :to="{ path: '/StorySection#StorySection' }">
+      <router-link :to="{ path: '/#StorySection' }">
         <icon name="backto"></icon>
         Back to top
       </router-link>
@@ -241,6 +241,52 @@ export default {};
       }
       .lg__box {
         @include lg__box();
+      }
+    }
+  }
+}
+
+// small mobile
+@include mediaxm() {
+  .layout {
+    .contact__form {
+      .box {
+        .sm__box {
+          @include sm__box();
+          display: none;
+        }
+        .md__box {
+          @include md__box();
+          top: 0rem;
+          left: 0.3rem;
+        }
+        .lg__box {
+          @include lg__box();
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@include mediaSm() {
+  .layout {
+    .contact__form {
+      .box {
+        .sm__box {
+          @include sm__box();
+          display: none;
+        }
+        .md__box {
+          @include md__box();
+          top: 0rem;
+          left: 0.5rem;
+        }
+        .lg__box {
+          @include lg__box();
+          display: none;
+        }
       }
     }
   }

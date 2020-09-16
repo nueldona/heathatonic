@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <headerSection />
-    <HeroSection />
+    <!-- <HeroSection /> -->
     <!-- <slider /> -->
     <StorySection id="StorySection" msg="Our Story" />
     <TeamSection
@@ -18,8 +18,6 @@
 <script>
 // @ is an alias to /src
 import headerSection from "@/components/headerSection";
-import HeroSection from "@/components/HeroSection";
-// import slider from "@/components/slider";
 import StorySection from "@/components/StorySection";
 import TeamSection from "@/components/TeamSection";
 import ValueCard from "@/components/ValueCard";
@@ -30,8 +28,7 @@ export default {
   name: "Home",
   components: {
     headerSection,
-    HeroSection,
-    // slider,
+    // HeroSection,
     StorySection,
     TeamSection,
     ValueCard,

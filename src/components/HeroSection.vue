@@ -1,8 +1,9 @@
 <template>
   <div id="hero">
+    <icon name="smallCross" class="smallCross"></icon>
+    <icon name="starBlack" class="starBlack"></icon>
+    <img :src="`${photos.img__1}`" alt="" class="img__1" />
     <main>
-      <img :src="`${photos.img__1}`" alt="" class="img__1" />
-      <icon name="sideBg" class="sideBg"></icon>
       <section class="container main__content">
         <section class="section__1">
           <div class="heading_text">
@@ -40,11 +41,18 @@
         </section>
 
         <section class="section__two ">
-          <img :src="`${photos.img__4}`" alt="" srcset="" />
+          <img :src="`${photos.img__2}`" alt="" class="img__2" />
+          <icon name="starSmall" class="starSmall"></icon>
+          <icon name="xmCross" class="xmCross"></icon>
+          <icon name="smCross" class="smCross"></icon>
+          <icon name="cupid" class="cupid"></icon>
+          <icon name="smCupid" class="smCupid"></icon>
+          <icon name="circle" class="circle"></icon>
+          <icon name="mStar" class="mStar"></icon>
+          <img :src="`${photos.img__4}`" alt="" srcset="" class="img" />
+          <slider />
         </section>
       </section>
-
-      <slider />
     </main>
   </div>
 </template>
@@ -53,7 +61,7 @@
 import slider from "@/components/slider";
 let photos = {
   img__1: require("@/assets/3461682-min.png"),
-  img__2: require("@/assets/Mask Group 1@2x.png"),
+  img__2: require("@/assets/Mask Group 28.png"),
   img__3: require("@/assets/Mask Group 2@2x.png"),
   img__4: require("@/assets/OBJECTS.png"),
 };
@@ -61,6 +69,7 @@ export default {
   data: function() {
     return {
       img__1: true,
+      img__2: true,
       img__3: true,
       img__4: true,
     };
@@ -72,8 +81,8 @@ export default {
   },
 
   components: {
-    slider
-  }
+    slider,
+  },
 };
 </script>
 
@@ -84,21 +93,30 @@ export default {
 p {
   margin-bottom: 0rem;
 }
+
+#hero {
+  margin-bottom: 18rem;
+}
+
+.smallCross {
+  display: none;
+}
+.starBlack {
+  display: none;
+}
+
+.img__1 {
+  display: none;
+}
+
 main {
   max-width: 100%;
   height: 100%;
   position: relative;
-  .img__1 {
-    width: 30px;
-    height: 30px;
-  }
-  .sideBg {
-    display: none;
-  }
+  margin: 5rem 0rem 6rem 0rem;
   .section__1 {
     width: 100%;
     height: 100%;
-    padding: 2rem 0rem;
     .heading_text {
       h1 {
         @include text__lg();
@@ -106,11 +124,11 @@ main {
 
       h2 {
         @include text__lg__bold();
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
       }
 
       p {
-        @include text__md();
+        @include text__xm();
         margin-bottom: 0.5rem;
       }
       a {
@@ -121,7 +139,7 @@ main {
 
     .section__2 {
       margin-top: 4rem;
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
       .btn-md {
         @include btn__xl();
         padding: 0rem 1rem;
@@ -129,15 +147,16 @@ main {
         text-align: center;
         align-items: center;
         display: flex;
-        color: #fff;
-        font-size: 1.2rem;
+        color: #cccccc;
+        font-size: 1rem;
+        // opacity: 0.8;
         .icon {
-          width: 35px;
-          height: 35px;
+          width: 1.875em;
+          height: 1.875em;
           background: $btnColor;
-          border-radius: 50px;
-          padding: 4px;
-          margin-right: 30px;
+          border-radius: 3.125rem;
+          padding: 0.26rem;
+          margin-right: 0.813rem;
         }
       }
     }
@@ -149,30 +168,31 @@ main {
         display: flex;
         .halfborder {
           position: relative;
-          top: -3px;
+          top: 0.19rem;
         }
         span {
           display: block;
-          width: 60px;
-          height: 60px;
+          width: 3.125em;
+          height: 3.125em;
           background: $btnColor;
-          border-radius: 50px;
+          border-radius: 3.125rem;
           position: relative;
-          top: 11px;
-          right: 35px;
+          top: 1.4rem;
+          right: 2rem;
         }
         img {
-          width: 70px;
-          height: 71px;
+          width: 4em;
+          height: 4em;
           z-index: 999;
           vertical-align: middle;
           position: relative;
-          right: 95px;
+          top: 0.5rem;
+          right: 5.5rem;
         }
       }
       .section__3__text {
         position: relative;
-        right: 70px;
+        right: 4.6rem;
       }
     }
   }
@@ -181,69 +201,317 @@ main {
     width: 100%;
     height: 100%;
     margin-top: 6rem;
+    overflow: hidden;
+    .img {
+      width: 23.75em;
+      height: 22.125em;
+      margin-bottom: 2rem;
+    }
+    .img__2 {
+      display: none;
+    }
+    .smallCross {
+      display: none;
+    }
+    .starBlack {
+      display: none;
+    }
+    .starSmall {
+      display: none;
+    }
+    .starSmall {
+      display: none;
+    }
+    .xmCross {
+      display: none;
+    }
+    .smCross {
+      display: none;
+    }
+    .cupid {
+      display: none;
+    }
+    .smCupid {
+      display: none;
+    }
+    .circle {
+      display: none;
+    }
+    .mStar {
+      display: none;
+    }
+  }
+}
+// small mobile
+@include mediaxm() {
+  main {
+    .section__3 {
+      width: 100%;
+      display: block !important;
+      position: relative;
+      // align-items: center;
+      .section__3__text {
+        position: absolute !important;
+        top: 1rem;
+        right: 0.5rem !important;
+      }
+    }
   }
 }
 
-@include altmediaLg() {
-  .main__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    .section__1 {
-      .heading_text {
-        p {
-          @include text__md();
-          margin-bottom: 0.5rem;
-          width: 90%;
-        }
+// mobile
+@include mediaSm() {
+  main {
+    padding: 0rem 0rem;
+    .heading_text {
+      p {
+        width: 70%;
       }
+    }
 
-      .section__2 {
-        margin-top: 4rem;
-        margin-bottom: 6rem;
-        display: flex;
-        .btn-md {
-          font-size: 1rem;
-          margin-right: 1rem;
-        }
+    .section__2 {
+      display: flex;
+      .btn-md {
+        margin-right: 1rem;
+      }
+    }
+
+    .section__3 {
+      width: 100%;
+      display: block !important;
+      position: relative;
+      // align-items: center;
+      .section__3__text {
+        position: absolute !important;
+        top: 1rem;
+        right: 0.5rem !important;
       }
     }
 
     .section__two {
-      width: 100%;
-      height: 100%;
+      margin: 6rem 0rem 0rem 0rem;
+      .img {
+        margin: 0rem 1.5rem 2rem 1.5rem;
+      }
+    }
+  }
+}
+
+// mini tablet
+@include mediaMd() {
+  main {
+    padding: 0rem 2rem;
+    .heading_text {
+      p {
+        width: 70%;
+      }
+    }
+
+    .section__2 {
+      display: flex;
+      .btn-md {
+        margin-right: 1rem;
+      }
+    }
+
+    .section__two {
+      margin: 6rem 0rem 0rem 0rem;
+      .img {
+        margin: 0rem 3rem 2rem 3rem;
+      }
+    }
+  }
+}
+
+// tablet
+@include mediaLg() {
+  main {
+    padding: 0rem 5rem;
+    .heading_text {
+      p {
+        width: 70%;
+      }
+    }
+
+    .section__2 {
+      display: flex;
+      .btn-md {
+        margin-right: 1rem;
+      }
+    }
+
+    .section__two {
+      margin: 6rem 5rem 0rem 5rem;
+      .img {
+        margin: 0rem 3rem 2rem 3rem;
+      }
+    }
+  }
+}
+
+// mini desktop
+@include altmediaLg() {
+  main {
+    .main__content {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      .section__1 {
+        .heading_text {
+          p {
+            width: 70%;
+          }
+        }
+
+        .section__2 {
+          margin-top: 4rem;
+          margin-bottom: 4rem;
+          display: flex;
+          .btn-md {
+            font-size: 1rem;
+            margin-right: 0.7rem;
+          }
+        }
+      }
+
+      .section__two {
+        width: 100%;
+        height: 100%;
+        margin-top: 0rem;
+        overflow: hidden;
+        padding: 0rem 0rem 0rem 2rem;
+        position: relative;
+        background-image: url("/assets/Mask Group 28.png");
+        // .img__2 {
+        //   display: block;
+        //   position: absolute;
+        //   content: "";
+        //   top: -6.5rem;
+        //   bottom: 0px;
+        //   right: 0rem;
+        //   z-index: -1;
+        //   min-width: 550px;
+        //   max-width: 580px;
+        //   height: 900px;
+        // }
+
+        .img {
+          margin-left: 2.5rem;
+        }
+      }
     }
   }
 }
 
 // desktop
-
 @include mediaXl() {
-  .main__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    .section__1 {
-      .heading_text {
-        p {
-          @include text__md();
-          margin-bottom: 0.5rem;
-          width: 90%;
+  .img__1 {
+    width: 650px;
+    height: 650px;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    left: -33rem;
+  }
+
+  .smallCross {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9.5rem;
+    left: 2rem;
+  }
+  .starBlack {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 20.5rem;
+    left: 2.5rem;
+  }
+  main {
+    .main__content {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      .section__1 {
+        .heading_text {
+          p {
+            width: 70%;
+          }
+        }
+
+        .section__2 {
+          margin-top: 4rem;
+          margin-bottom: 4rem;
+          display: flex;
+          .btn-md {
+            font-size: 1rem;
+            margin-right: 1rem;
+          }
         }
       }
 
-      .section__2 {
-        margin-top: 4rem;
-        margin-bottom: 6rem;
-        display: flex;
-        .btn-md {
-          font-size: 1rem;
-          margin-right: 1rem;
+      .section__two {
+        position: relative;
+        overflow: hidden;
+        margin-top: 0rem;
+        background-image: url("/assets/Mask Group 28.png");
+        // .img__2 {
+        //   display: block;
+        //   position: absolute;
+        //   content: "";
+        //   top: -6rem;
+        //   bottom: 0px;
+        //   right: 0rem;
+        //   z-index: -1;
+        //   max-width: 800px;
+        //   height: 900px;
+        // }
+
+        .img {
+          margin-left: 3rem;
+        }
+        .starSmall {
+          display: block;
+          position: absolute;
+          top: 15rem;
+          left: 0rem;
+        }
+        .xmCross {
+          display: block;
+          position: absolute;
+          top: 8rem;
+          left: 0rem;
+        }
+        .smCross {
+          display: block;
+          position: absolute;
+          top: 12.5rem;
+          left: 2rem;
+        }
+        .cupid {
+          display: block;
+          position: absolute;
+          top: 0rem;
+          right: 0rem;
+        }
+        .smCupid {
+          display: block;
+          position: absolute;
+          top: 21rem;
+          right: 0rem;
+        }
+        .circle {
+          display: block;
+          position: absolute;
+          top: 7.5rem;
+          left: 4rem;
+        }
+        .mStar {
+          display: block;
+          position: absolute;
+          top: 5rem;
+          left: 3.5rem;
         }
       }
-    }
-
-    .section__two {
-      width: 100%;
-      height: 100%;
     }
   }
 }

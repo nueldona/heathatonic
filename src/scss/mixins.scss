@@ -29,7 +29,7 @@
 }
 
 @mixin text__sm {
-  font-size: .8rem;
+  font-size: 1rem;
   font-style: normal;
   color: $secondaryColor;
   letter-spacing: 0px;
@@ -145,8 +145,8 @@
 }
 
 @mixin btn__xl {
-  width: 260px;
-  height: 63px;
+  width: 210px;
+  height: 53px;
   background: $primaryColor 0% 0% no-repeat padding-box;
   box-shadow: 6px 8px 20px #19204D0D;
   padding: .400rem .85rem;
@@ -207,20 +207,26 @@
   left: 22rem;
 }
 
+@mixin mediaxm {
+  @media screen and (min-width: 350px) and (max-width: 470px) {
+    @content;
+  }
+}
+
 @mixin mediaSm {
-  @media screen and (min-width: 300px) and (max-width: 500px) {
+  @media screen and (min-width: 470px) and (max-width: 576px) {
     @content;
   }
 }
 
 @mixin mediaMd {
-  @media screen and (min-width: 505px) and (max-width: 768px) {
+  @media screen and (min-width: 576px) and (max-width: 754px) {
     @content;
   }
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1171px) {
+  @media screen and (min-width: 768px) and (max-width: 990px) {
     @content;
   }
 }
@@ -238,7 +244,7 @@
 }
 
 @mixin altmediaLg {
-  @media screen and (min-width: 960px) and (max-width: 1171px) {
+  @media screen and (min-width: 990px) and (max-width: 1171px) {
     @content;
   }
 }

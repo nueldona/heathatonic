@@ -10,7 +10,7 @@
     >
       <defs></defs>
       <path
-        class="a"
+        class="a1"
         d="M817,520.187H623v-194H474.182v194h-194V669.005h194V863H623V669.005H817Z"
         transform="translate(-280.186 -326.191)"
       />
@@ -637,8 +637,8 @@
     <svg
       v-if="name === 'monitor'"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
     >
       <defs></defs>
@@ -653,8 +653,8 @@
     <svg
       v-if="name === 'add'"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
     >
       <defs></defs>
@@ -667,8 +667,8 @@
       v-if="name === 'halfborder'"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="55"
-      height="87"
+      width="50"
+      height="83"
       viewBox="0 0 55 110"
     >
       <defs>
@@ -688,18 +688,249 @@
         </g>
       </g>
     </svg>
+
+    <!-- twenty -->
+    <svg
+      v-if="name === 'smallCross'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="23.572"
+      height="23.572"
+      viewBox="0 0 27.572 27.572"
+    >
+      <defs></defs>
+      <path
+        class="h"
+        d="M307.758,336.155h-9.964v-9.964H290.15v9.964h-9.964V343.8h9.964v9.964h7.644V343.8h9.964Z"
+        transform="translate(-280.185 -326.191)"
+      />
+    </svg>
+
+    <!-- twenty-one -->
+    <svg
+      v-if="name === 'starBlack'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16.789"
+      height="16.789"
+      viewBox="0 0 21.789 21.789"
+    >
+      <defs></defs>
+      <g transform="translate(-414.034 -264.364)">
+        <path
+          class="aaaa"
+          d="M424.415,280.467v4.852a.514.514,0,1,0,1.028,0v-4.852a5.093,5.093,0,0,1-1.028,0Z"
+        />
+        <path
+          class="aaaa"
+          d="M425.443,270.05V265.2a.514.514,0,0,0-1.028,0v4.852c.169-.016.341-.025.514-.025S425.274,270.034,425.443,270.05Z"
+        />
+        <path
+          class="aaaa"
+          d="M419.72,274.745h-4.852a.514.514,0,0,0,0,1.027h4.852c-.016-.169-.025-.34-.025-.513S419.7,274.914,419.72,274.745Z"
+        />
+        <path
+          class="aaaa"
+          d="M434.989,274.745h-4.852a5.084,5.084,0,0,1,0,1.027h4.852a.514.514,0,1,0,0-1.027Z"
+        />
+        <path
+          class="aaaa"
+          d="M420.884,278.577l-3.432,3.432a.514.514,0,0,0,.726.727l3.433-3.433A5.307,5.307,0,0,1,420.884,278.577Z"
+        />
+        <path
+          class="aaaa"
+          d="M428.974,271.941l3.432-3.433a.514.514,0,1,0-.727-.726l-3.432,3.432A5.258,5.258,0,0,1,428.974,271.941Z"
+        />
+        <path
+          class="aaaa"
+          d="M428.247,279.3l3.432,3.432a.514.514,0,0,0,.727-.727l-3.432-3.432A5.369,5.369,0,0,1,428.247,279.3Z"
+        />
+        <path
+          class="aaaa"
+          d="M421.611,271.214l-3.433-3.432a.513.513,0,1,0-.726.726l3.432,3.433A5.258,5.258,0,0,1,421.611,271.214Z"
+        />
+      </g>
+    </svg>
+
+    <!-- twenty-two -->
+    <svg
+      v-if="name === 'starSmall'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="18.79"
+      height="18.789"
+      viewBox="0 0 21.79 21.789"
+    >
+      <defs></defs>
+      <g class="a" transform="translate(-65.943 -233.625)">
+        <path
+          class="aaaaa"
+          d="M76.325,249.729v4.852a.514.514,0,0,0,1.027,0v-4.852c-.169.016-.34.025-.513.025S76.494,249.745,76.325,249.729Z"
+        />
+        <path
+          class="aaaaa"
+          d="M77.352,239.312V234.46a.514.514,0,1,0-1.027,0v4.852a5.084,5.084,0,0,1,1.027,0Z"
+        />
+        <path
+          class="aaaaa"
+          d="M71.63,244.006H66.778a.514.514,0,1,0,0,1.028H71.63a5.127,5.127,0,0,1-.026-.514C71.6,244.347,71.613,244.176,71.63,244.006Z"
+        />
+        <path
+          class="aaaaa"
+          d="M86.9,244.006H82.047c.017.17.026.341.026.514a5.125,5.125,0,0,1-.026.514H86.9a.514.514,0,1,0,0-1.028Z"
+        />
+        <path
+          class="aaaaa"
+          d="M72.794,247.838l-3.432,3.433a.513.513,0,1,0,.726.726l3.433-3.432A5.2,5.2,0,0,1,72.794,247.838Z"
+        />
+        <path
+          class="aaaaa"
+          d="M80.883,241.2l3.433-3.432a.514.514,0,0,0-.727-.727l-3.432,3.432A5.306,5.306,0,0,1,80.883,241.2Z"
+        />
+        <path
+          class="aaaaa"
+          d="M80.157,248.565,83.589,252a.514.514,0,0,0,.727-.726l-3.433-3.433A5.251,5.251,0,0,1,80.157,248.565Z"
+        />
+        <path
+          class="aaaaa"
+          d="M73.52,240.475l-3.432-3.432a.514.514,0,0,0-.726.727l3.432,3.432A5.306,5.306,0,0,1,73.52,240.475Z"
+        />
+      </g>
+    </svg>
+
+    <!-- twenty three -->
+    <svg
+      v-if="name === 'xmCross'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="11.791"
+      height="11.791"
+      viewBox="0 0 12.791 12.791"
+    >
+      <defs></defs>
+      <path
+        class="a23"
+        d="M153.342,140.556H148.72v-4.622h-3.546v4.622h-4.622V144.1h4.622v4.622h3.546V144.1h4.622Z"
+        transform="translate(-140.552 -135.933)"
+      />
+    </svg>
+
+    <!-- twenty-four -->
+    <svg
+      v-if="name === 'smCross'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="22.57"
+      height="22.57"
+      viewBox="0 0 31.57 31.57"
+    >
+      <defs></defs>
+      <path
+        class="a24"
+        d="M146.947,206.551H136V195.606h-8.4v10.946H116.659v8.4H127.6v10.946H136V214.948h10.946Z"
+        transform="translate(-116.018 -194.965)"
+      />
+    </svg>
+
+    <!-- twenty-five -->
+    <svg
+      v-if="name === 'cupid'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="80.388"
+      height="79.445"
+      viewBox="0 0 100.388 99.445"
+    >
+      <defs></defs>
+      <path
+        class="a25"
+        d="M324.843,392.327c-17.55-8.327-25.533,9.437-26.127,10.826-.593-1.389-8.576-19.153-26.126-10.826-18.251,8.654-9.051,36.288,26.091,57.179v.042l.036-.018.036.018v-.042C333.894,428.615,343.094,400.981,324.843,392.327Z"
+        transform="translate(100.672 -463.665) rotate(41)"
+      />
+    </svg>
+
+    <!-- twenty six -->
+    <svg
+      v-if="name === 'smCupid'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="55.599"
+      height="46.049"
+      viewBox="0 0 75.599 66.049"
+    >
+      <defs></defs>
+      <path
+        class="a26"
+        d="M324.843,392.327c-17.55-8.327-25.533,9.437-26.127,10.826-.593-1.389-8.576-19.153-26.126-10.826-18.251,8.654-9.051,36.288,26.091,57.179v.042l.036-.018.036.018v-.042C333.894,428.615,343.094,400.981,324.843,392.327Z"
+        transform="translate(-260.917 -387.551)"
+      />
+    </svg>
+
+    <!-- twenty seven -->
+    <svg
+      v-if="name === 'circle'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8.679"
+      height="8.68"
+      viewBox="0 0 8.679 8.68"
+    >
+      <defs></defs>
+      <path
+        class="a"
+        d="M205.12,170.63a3.7,3.7,0,1,1-3.7-3.7A3.7,3.7,0,0,1,205.12,170.63Z"
+        transform="translate(-197.082 -166.29)"
+      />
+    </svg>
+
+    <!-- twenty eight -->
+    <svg
+      v-if="name === 'mStar'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20.148"
+      height="20.149"
+      viewBox="0 0 22.148 22.149"
+    >
+      <defs></defs>
+      <g class="a28" transform="translate(-186.649 -99.199)">
+        <path
+          class="b28"
+          d="M197.209,115.482v4.852a.514.514,0,1,0,1.028,0v-4.852c-.169.016-.341.025-.514.025S197.378,115.5,197.209,115.482Z"
+        />
+        <path
+          class="b28"
+          d="M198.237,105.065v-4.852a.514.514,0,1,0-1.028,0v4.852a5.094,5.094,0,0,1,1.028,0Z"
+        />
+        <path
+          class="b28"
+          d="M192.514,109.76h-4.852a.514.514,0,0,0,0,1.027h4.852c-.016-.169-.025-.34-.025-.514S192.5,109.929,192.514,109.76Z"
+        />
+        <path
+          class="b28"
+          d="M207.783,109.76h-4.852a5.084,5.084,0,0,1,0,1.027h4.852a.514.514,0,1,0,0-1.027Z"
+        />
+        <path
+          class="b28"
+          d="M193.678,113.592l-3.432,3.432a.514.514,0,0,0,.726.727l3.433-3.433A5.251,5.251,0,0,1,193.678,113.592Z"
+        />
+        <path
+          class="b28"
+          d="M201.768,106.955l3.432-3.432a.514.514,0,1,0-.727-.727l-3.432,3.433A5.307,5.307,0,0,1,201.768,106.955Z"
+        />
+        <path
+          class="b28"
+          d="M201.041,114.318l3.432,3.433a.514.514,0,1,0,.727-.727l-3.432-3.432A5.307,5.307,0,0,1,201.041,114.318Z"
+        />
+        <path
+          class="b28"
+          d="M194.4,106.229l-3.433-3.433a.514.514,0,0,0-.726.727l3.432,3.432A5.252,5.252,0,0,1,194.4,106.229Z"
+        />
+      </g>
+    </svg>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["name"]
+  props: ["name"],
 };
 </script>
 
 <style>
 /* first svg #cross */
-.a {
+.a1 {
   fill: rgba(251, 169, 29, 0.19);
   opacity: 0.66;
 }
@@ -894,5 +1125,69 @@ tenth fill */
 }
 .de {
   stroke: none;
+}
+
+.aaaa {
+  fill: none;
+  stroke: #19204d;
+  stroke-miterlimit: 10;
+  stroke-width: 0.641px;
+}
+
+.aaa {
+  opacity: 0.57;
+}
+.aaaaa {
+  fill: #fff;
+  stroke: #19204d;
+  stroke-miterlimit: 10;
+  stroke-width: 0.641px;
+}
+
+/* twenty three */
+.a23 {
+  fill: #19204d;
+  opacity: 0.57;
+}
+
+/* twenty four */
+.a24 {
+  fill: none;
+  stroke: #fba91d;
+  stroke-miterlimit: 10;
+  stroke-width: 1.282px;
+  opacity: 0.57;
+}
+
+/* twenty five */
+.a25 {
+  fill: none;
+  stroke: #0c123b;
+  stroke-width: 5px;
+}
+
+/* twenty six */
+.a26 {
+  fill: none;
+  stroke: #0c1551;
+  stroke-width: 5px;
+}
+
+/* twenty seven */
+.a {
+  fill: none;
+  stroke: #606060;
+  stroke-miterlimit: 10;
+  stroke-width: 1.282px;
+  opacity: 0.57;
+}
+
+/* twenty eight */
+.a28 {
+  opacity: 0.57;
+}
+.b28 {
+  fill: #606060;
+  stroke: #fba91d;
 }
 </style>

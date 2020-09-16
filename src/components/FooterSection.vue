@@ -46,4 +46,18 @@ export default {};
     }
   }
 }
+
+// small mobile
+@include mediaxm() {
+  .footer {
+    margin-top: 3rem;
+  }
+}
+
+// mobile
+@include mediaSm() {
+  .footer {
+    margin-top: 3rem;
+  }
+}
 </style>
