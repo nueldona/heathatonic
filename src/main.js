@@ -7,6 +7,9 @@ import { vSwitch, vCase, vDefault } from "v-switch-case";
 
 Vue.config.productionTip = false;
 
+const VueScrollTo = require("vue-scrollto");
+Vue.use(VueScrollTo);
+
 Vue.use(vSwitch, vCase, vDefault);
 Vue.component("icon", require("./components/Icons").default);
 Vue.component("cards", require("./components/cards").default);

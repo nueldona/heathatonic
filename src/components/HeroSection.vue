@@ -3,6 +3,7 @@
     <icon name="smallCross" class="smallCross"></icon>
     <icon name="starBlack" class="starBlack"></icon>
     <img :src="`${photos.img__1}`" alt="" class="img__1" />
+    <img :src="`${photos.img__2}`" alt="" class="img__2" />
     <main>
       <section class="container main__content">
         <section class="section__1">
@@ -41,7 +42,6 @@
         </section>
 
         <section class="section__two ">
-          <img :src="`${photos.img__2}`" alt="" class="img__2" />
           <icon name="starSmall" class="starSmall"></icon>
           <icon name="xmCross" class="xmCross"></icon>
           <icon name="smCross" class="smCross"></icon>
@@ -50,20 +50,26 @@
           <icon name="circle" class="circle"></icon>
           <icon name="mStar" class="mStar"></icon>
           <img :src="`${photos.img__4}`" alt="" srcset="" class="img" />
-          <slider />
+          <slides />
         </section>
       </section>
     </main>
+    <div class="text-center readMore">
+      <a href="#" v-scroll-to="'#StorySection'">
+        <icon name="readMore" class="icon"></icon>
+        Read More
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-import slider from "@/components/slider";
+import slides from "@/components/slides";
 let photos = {
   img__1: require("@/assets/3461682-min.png"),
   img__2: require("@/assets/Mask Group 28.png"),
   img__3: require("@/assets/Mask Group 2@2x.png"),
-  img__4: require("@/assets/OBJECTS.png"),
+  img__4: require("@/assets/OBJECTS.png")
 };
 export default {
   data: function() {
@@ -71,18 +77,18 @@ export default {
       img__1: true,
       img__2: true,
       img__3: true,
-      img__4: true,
+      img__4: true
     };
   },
   computed: {
     photos() {
       return photos;
-    },
+    }
   },
 
   components: {
-    slider,
-  },
+    slides
+  }
 };
 </script>
 
@@ -109,11 +115,24 @@ p {
   display: none;
 }
 
+.img__2 {
+  display: none;
+}
+.readMore a {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #fba91d;
+  opacity: 1;
+  text-decoration: none;
+}
+
 main {
   max-width: 100%;
   height: 100%;
   position: relative;
-  margin: 5rem 0rem 6rem 0rem;
+  margin: 5rem 0rem 2rem 0rem;
   .section__1 {
     width: 100%;
     height: 100%;
@@ -404,6 +423,17 @@ main {
 
 // desktop
 @include mediaXl() {
+  .img__2 {
+    display: block;
+    position: absolute;
+    content: "";
+    top: -2rem;
+    bottom: 0px;
+    right: 0rem;
+    z-index: -1;
+    max-width: 50em;
+    height: 60.5em;
+  }
   .img__1 {
     width: 650px;
     height: 650px;
@@ -453,18 +483,6 @@ main {
         position: relative;
         overflow: hidden;
         margin-top: 0rem;
-        background-image: url("/assets/Mask Group 28.png");
-        // .img__2 {
-        //   display: block;
-        //   position: absolute;
-        //   content: "";
-        //   top: -6rem;
-        //   bottom: 0px;
-        //   right: 0rem;
-        //   z-index: -1;
-        //   max-width: 800px;
-        //   height: 900px;
-        // }
 
         .img {
           margin-left: 3rem;

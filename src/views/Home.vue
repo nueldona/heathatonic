@@ -1,8 +1,6 @@
 <template>
   <div class="home">
     <headerSection />
-    <!-- <HeroSection /> -->
-    <!-- <slider /> -->
     <StorySection id="StorySection" msg="Our Story" />
     <TeamSection
       id="TeamSection"
@@ -28,7 +26,6 @@ export default {
   name: "Home",
   components: {
     headerSection,
-    // HeroSection,
     StorySection,
     TeamSection,
     ValueCard,

@@ -95,11 +95,11 @@
         </section>
       </section>
     </div>
-    <div class="text-center">
-      <router-link :to="{ path: '/#StorySection' }">
-        <icon name="backto"></icon>
+    <div class="text-center backto">
+      <a href="#" v-scroll-to="'#StorySection'">
+        <icon name="backto" class="icon"></icon>
         Back to top
-      </router-link>
+      </a>
     </div>
   </div>
 </template>
@@ -243,6 +243,20 @@ export default {};
         @include lg__box();
       }
     }
+  }
+}
+
+.backto a {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #19204dbf;
+  opacity: 1;
+  text-decoration: none;
+
+  .icon {
+    margin-bottom: 0.6rem;
   }
 }
 

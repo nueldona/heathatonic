@@ -95,28 +95,28 @@ import { vSwitch, vCase, vDefault } from "v-switch-case";
 import HeroSection from "@/components/HeroSection";
 let photos = {
   bg__img: require("@/assets/Mask Group 1@2x.png"),
-  img__2: require("@/assets/Mask Group 28.png"),
+  img__2: require("@/assets/Mask Group 28.png")
 };
 export default {
   components: {
-    HeroSection,
+    HeroSection
   },
   directives: {
     switch: vSwitch,
     case: vCase,
-    default: vDefault,
+    default: vDefault
   },
   data: function() {
     return {
       bg__img: true,
-      img__2: true,
+      img__2: true
     };
   },
   computed: {
     photos() {
       return photos;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -127,11 +127,10 @@ a {
   text-decoration: none;
 }
 
-
 .header {
   max-width: 100%;
   height: 100%;
-  background: #ffffff;
+  // background: #ffffff;
   // overflow: visible;
 
   nav {
@@ -189,6 +188,13 @@ a {
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 0.8rem !important;
+  }
+}
+
+// desktop
+@include mediaXl() {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1rem !important;
   }
 }
 </style>

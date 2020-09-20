@@ -1,5 +1,5 @@
 <template>
-  <div class="hello w-100" id="top">
+  <div class="hello w-100">
     <div class="section__title">
       <icon name="cross" class="cross__svg"></icon>
       <h1>{{ msg }}</h1>
