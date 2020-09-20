@@ -2,8 +2,8 @@
   <div class="hello w-100">
     <div class="section__title">
       <icon name="cross" class="cross__svg"></icon>
-      <h1>{{ msg }}</h1>
-      <p>
+      <h1 data-aos="fade" data-aos-duration="1800">{{ msg }}</h1>
+      <p data-aos="fade" data-aos-duration="1800">
         Over the years, the deplorable state of PHCs in Nigeria has lead to
         their inadequacy to meet the increasing healthcare need of people in
         their community. Out of our desire to improve and ensure self
@@ -18,7 +18,13 @@
     <div class="section__body container">
       <div class="row">
         <div class="col-md-4 col-lg-4">
-          <img src="@/assets/NoPath - Copy (25).png" alt="doctor attendance" />
+          <img
+            src="@/assets/NoPath - Copy (25).png"
+            alt="doctor attendance"
+            data-aos="zoom-out"
+            data-aos-anchor=".anchor"
+            data-aos-duration="1500"
+          />
         </div>
         <div class="col-md-4 col-lg-4">
           <div class="img-2">
@@ -27,6 +33,9 @@
               alt="health center building"
               sizes="(max-width: 500px) 960w, 480w"
               src="@/assets/NoPath - Copy (19).png"
+              data-aos="zoom-out"
+              data-aos-anchor=".anchor"
+              data-aos-duration="1500"
             />
           </div>
           <div class="img-3">
@@ -35,11 +44,20 @@
               alt="text records"
               sizes="(max-width: 500px) 960w, 480w"
               src="@/assets/NoPath - Copy (24).png"
+              data-aos="zoom-out"
+              data-aos-anchor=".anchor"
+              data-aos-duration="1500"
             />
           </div>
         </div>
         <div class="col-md-4 col-lg-4">
-          <img src="@/assets/NoPath - Copy (23).png" alt="examine" />
+          <img
+            src="@/assets/NoPath - Copy (23).png"
+            alt="examine"
+            data-aos="zoom-out"
+            data-aos-anchor=".anchor"
+            data-aos-duration="1500"
+          />
         </div>
       </div>
     </div>

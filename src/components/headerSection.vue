@@ -1,6 +1,6 @@
 <template>
   <div id="layout">
-    <div id="header" class="header">
+    <div id="header" class="header" data-aos="fade" data-aos-duration="1500">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light ">
           <a class="navbar-brand" href="#"><icon name="logo"></icon></a>

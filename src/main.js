@@ -3,6 +3,8 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./scss/index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { vSwitch, vCase, vDefault } from "v-switch-case";
 
 Vue.config.productionTip = false;
@@ -15,6 +17,9 @@ Vue.component("icon", require("./components/Icons").default);
 Vue.component("cards", require("./components/cards").default);
 
 new Vue({
+  created() {
+    AOS.init();
+  },
   router,
   store,
   render: h => h(App)

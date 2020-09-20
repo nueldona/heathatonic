@@ -1,20 +1,20 @@
 <template>
   <div class="layout">
     <div class="container">
-      <section class="first__section">
-        <div class="text">
+      <section class="first__section" data-aos="fade" data-aos-duration="1300">
+        <div class="text" data-aos="fade" data-aos-duration="1500">
           <h1>Sign up free</h1>
           <span>
             <h2>Get instant access to quality health care.</h2>
           </span>
         </div>
-        <div class="button">
+        <div class="button" data-aos="zoom-in" data-aos-duration="1500">
           <a href="#" class="btn btn-md"><p>Register Today</p></a>
         </div>
       </section>
 
       <section class="contact__form">
-        <section class="form">
+        <section class="form" data-aos="zoom-in" data-aos-duration="1000">
           <h1>Contact Us</h1>
           <p>
             Feel free to contact us at any time, we will get back to you as soon
@@ -65,7 +65,7 @@
           </section>
         </section>
 
-        <section class="box">
+        <section class="box" data-aos="zoom-in" data-aos-duration="1500">
           <div class="sm__box"></div>
           <div class="md__box">
             <h1>info</h1>
@@ -95,7 +95,7 @@
         </section>
       </section>
     </div>
-    <div class="text-center backto">
+    <div class="text-center backto" data-aos="fade" data-aos-duration="1500">
       <a href="#" v-scroll-to="'#StorySection'">
         <icon name="backto" class="icon"></icon>
         Back to top

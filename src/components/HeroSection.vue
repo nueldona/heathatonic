@@ -7,17 +7,30 @@
     <main>
       <section class="container main__content">
         <section class="section__1">
-          <div class="heading_text">
-            <h1>Access to quality</h1>
+          <div
+            class="heading_text"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <h1 data-aos="fade-down" data-aos-duration="1500">
+              Access to quality
+            </h1>
             <h2>Primary health care</h2>
             <p>
               Consult with a doctor in your community PHC and get unlimited
               access to your medical record on the go.
             </p>
-            <a href="#">Prompt.Accessible.Free</a>
+            <a href="#" data-aos="fade-down" data-aos-duration="1700"
+              >Prompt.Accessible.Free</a
+            >
           </div>
 
-          <div class="section__2">
+          <div
+            class="section__2"
+            data-aos="zoom-out"
+            data-aos-anchor=".anchor"
+            data-aos-duration="1000"
+          >
             <button class="btn btn-md">
               <icon name="monitor" class="icon"></icon>
               Talk to a doctor
@@ -28,13 +41,25 @@
             </button>
           </div>
 
-          <div class="section__3">
+          <div
+            class="section__3"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="400"
+            data-aos-offset="0"
+          >
             <div class="section__3__img">
               <icon name="halfborder" class="halfborder"></icon>
               <span></span><img :src="`${photos.img__3}`" alt="" />
             </div>
 
-            <div class="section__3__text">
+            <div
+              class="section__3__text"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="500"
+              data-aos-offset="0"
+            >
               <p>Preventing the spread of Malaria.</p>
               <p><b>Read more on preventing malaria</b></p>
             </div>
@@ -42,19 +67,63 @@
         </section>
 
         <section class="section__two ">
-          <icon name="starSmall" class="starSmall"></icon>
-          <icon name="xmCross" class="xmCross"></icon>
-          <icon name="smCross" class="smCross"></icon>
-          <icon name="cupid" class="cupid"></icon>
-          <icon name="smCupid" class="smCupid"></icon>
-          <icon name="circle" class="circle"></icon>
-          <icon name="mStar" class="mStar"></icon>
-          <img :src="`${photos.img__4}`" alt="" srcset="" class="img" />
-          <slides />
+          <icon
+            name="starSmall"
+            class="starSmall"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <icon
+            name="xmCross"
+            class="xmCross"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <icon
+            name="smCross"
+            class="smCross"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <icon
+            name="cupid"
+            class="cupid"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <icon
+            name="smCupid"
+            class="smCupid"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <icon
+            name="circle"
+            class="circle"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <icon
+            name="mStar"
+            class="mStar"
+            data-aos="fade"
+            data-aos-duration="1700"
+          ></icon>
+          <img
+            :src="`${photos.img__4}`"
+            alt=""
+            srcset=""
+            class="img"
+            data-aos="fade-zoom-out"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="600"
+            data-aos-offset="0"
+          />
+          <slides data-aos="fade" />
         </section>
       </section>
     </main>
-    <div class="text-center readMore">
+    <div class="text-center readMore" data-aos="fade" data-aos-duration="2000">
       <a href="#" v-scroll-to="'#StorySection'">
         <icon name="readMore" class="icon"></icon>
         Read More

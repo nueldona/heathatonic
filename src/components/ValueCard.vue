@@ -3,7 +3,7 @@
     <div class="our__value">
       <div class="container">
         <h1>Our values</h1>
-        <p class="details">
+        <p class="details" data-aos="fade" data-aos-duration="1000">
           Our passion for standard health care delivery within local communities
           is the zeal that drives us. A already bad health system in Nigeria can
           only be improved from the foundation.
@@ -11,7 +11,11 @@
 
         <div class="value__cards row">
           <div class="col-sm-12 col-lg-4">
-            <div class="value__card card">
+            <div
+              class="value__card card"
+              data-aos="flip-right"
+              data-aos-duration="1000"
+            >
               <icon name="Group414" class="Group414"></icon>
               <div class="card-body">
                 <h5 class="card-title">Passion & Empathy</h5>
@@ -26,7 +30,11 @@
           </div>
 
           <div class="col-sm-12 col-lg-4">
-            <div class="value__card card">
+            <div
+              class="value__card card"
+              data-aos="flip-right"
+              data-aos-duration="1200"
+            >
               <icon name="Group374" class="Group374"></icon>
               <div class="card-body">
                 <h5 class="card-title">Innovation & Collaboration</h5>
@@ -41,7 +49,11 @@
           </div>
 
           <div class="col-sm-12 col-lg-4">
-            <div class="value__card card ">
+            <div
+              class="value__card card "
+              data-aos="flip-right"
+              data-aos-duration="1400"
+            >
               <icon name="Group321" class="Group321"></icon>
               <div class="card-body">
                 <h5 class="card-title">Integrity</h5>

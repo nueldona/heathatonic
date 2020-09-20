@@ -1,7 +1,7 @@
 <template>
   <div class="team__section">
     <div class="container">
-      <div class="team__title">
+      <div class="team__title" data-aos="slide-up" data-aos-easing="ease">
         <h1>{{ title }}</h1>
         <p>{{ msg }}</p>
       </div>

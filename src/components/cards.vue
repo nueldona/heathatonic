@@ -11,17 +11,38 @@
             <img
               :src="require('@/assets/' + team__member.img)"
               alt="profile pictures"
+              data-aos="zoom-out"
+              data-aos-anchor=".anchor"
+              data-aos-duration="1300"
             />
           </div>
           <div class="team__details col-lg-7">
-            <h1>{{ team__member.title }}</h1>
-            <p>
+            <h1
+              data-aos="slide-up"
+              data-aos-easing="ease"
+              data-aos-duration="1000"
+            >
+              {{ team__member.title }}
+            </h1>
+            <p
+              data-aos="slide-up"
+              data-aos-easing="ease"
+              data-aos-duration="1100"
+            >
               {{ team__member.position }}
             </p>
-            <p>
+            <p
+              data-aos="slide-up"
+              data-aos-easing="ease"
+              data-aos-duration="1200"
+            >
               {{ team__member.details }}
             </p>
-            <button class="btn btn__md">
+            <button
+              class="btn btn__md"
+              data-aos="fade"
+              data-aos-duration="1400"
+            >
               <icon name="LinkedIn" class="LinkedIn"></icon>
               <span>Linked In</span>
             </button>
