@@ -13,7 +13,7 @@
         </div>
       </section>
 
-      <section class="contact__form">
+      <section class="contact__form" id="Contact">
         <section class="form" data-aos="zoom-in" data-aos-duration="1000">
           <h1>Contact Us</h1>
           <p>

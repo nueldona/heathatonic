@@ -3,13 +3,13 @@
     <div class="team__members w-100 h-100">
       <div class="container">
         <div
-          v-for="team__member in team__members"
-          v-bind:key="team__member.id"
+          v-for="TeamDetail in allTeamDetails"
+          v-bind:key="TeamDetail.id"
           class="team__member"
         >
           <div class="team__id col-lg-5">
             <img
-              :src="require('@/assets/' + team__member.img)"
+              :src="require('@/assets/' + TeamDetail.img)"
               alt="profile pictures"
               data-aos="zoom-out"
               data-aos-anchor=".anchor"
@@ -22,21 +22,21 @@
               data-aos-easing="ease"
               data-aos-duration="1000"
             >
-              {{ team__member.title }}
+              {{ TeamDetail.title }}
             </h1>
             <p
               data-aos="slide-up"
               data-aos-easing="ease"
               data-aos-duration="1100"
             >
-              {{ team__member.position }}
+              {{ TeamDetail.position }}
             </p>
             <p
               data-aos="slide-up"
               data-aos-easing="ease"
               data-aos-duration="1200"
             >
-              {{ team__member.details }}
+              {{ TeamDetail.details }}
             </p>
             <button
               class="btn btn__md"
@@ -54,24 +54,30 @@
 </template>
 
 <script>
+// eslint-disable-next-line no-unused-vars
+import { mapGetters } from "vuex";
 export default {
-  mounted() {
-    this.fetchData();
-  },
-  data() {
-    return {
-      team__members: []
-    };
-  },
-  methods: {
-    async fetchData() {
-      // eslint-disable-next-line no-unused-vars
-      const res = await fetch("teamDetails.json");
-      // eslint-disable-next-line no-unused-vars
-      const val = await res.json();
-      this.team__members = val;
-    }
+  name: "cards",
+  computed: {
+    ...mapGetters(["allTeamDetails"])
   }
+  // mounted() {
+  //   this.fetchData();
+  // },
+  // data() {
+  //   return {
+  //     team__members: []
+  //   };
+  // },
+  // methods: {
+  //   async fetchData() {
+  //     // eslint-disable-next-line no-unused-vars
+  //     const res = await fetch("teamDetails.json");
+  //     // eslint-disable-next-line no-unused-vars
+  //     const val = await res.json();
+  //     this.team__members = val;
+  //   }
+  // }
 };
 </script>
 
@@ -148,3 +154,6 @@ export default {
   }
 }
 </style>
+
+note : the commented codes are for the jsonfile storing all details conatin the
+cards, i used vuex instead of the json file

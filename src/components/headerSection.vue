@@ -32,7 +32,8 @@
                 tag="li"
                 class="nav-item nav-link"
                 class-active="active"
-                to="/About"
+                v-scroll-to="'#StorySection'"
+                to="#StorySection"
                 exact
                 ><img :src="`${photos.bg__img}`" alt="" srcset="" /> About
                 us</router-link
@@ -41,7 +42,8 @@
                 tag="li"
                 class="nav-item nav-link"
                 class-active="active"
-                to="/Contact"
+                v-scroll-to="'#Contact'"
+                to="#Contact"
                 exact
                 ><img :src="`${photos.bg__img}`" alt="" srcset="" />
                 Contact</router-link
@@ -59,7 +61,7 @@
                 tag="li"
                 class="nav-item nav-link"
                 class-active="active"
-                to="/Health tips"
+                to="/Healthtips"
                 exact
                 ><img :src="`${photos.bg__img}`" alt="" srcset="" /> Health
                 tips</router-link
@@ -75,11 +77,13 @@
               >
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <a href="#" class="nav__button">Log in </a>
-              <a href="#" class="nav__button__2">
+              <router-link class="nav__button" to="/signIn"
+                >Log in
+              </router-link>
+              <router-link class="nav__button__2" to="/signUp">
                 <span>Sign up</span>
-                <a href="http://">registeration now</a>
-              </a>
+                <a href="#" to="/signUp">registeration now</a>
+              </router-link>
             </form>
           </div>
         </nav>
