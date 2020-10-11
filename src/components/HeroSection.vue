@@ -338,10 +338,13 @@ main {
       display: block !important;
       position: relative;
       // align-items: center;
+      p {
+        font-size: 13px;
+      }
       .section__3__text {
         position: absolute !important;
         top: 1rem;
-        right: 0.5rem !important;
+        right: 1.7rem !important;
       }
     }
   }

@@ -95,12 +95,12 @@
         </section>
       </section>
     </div>
-    <div class="text-center backto" data-aos="fade" data-aos-duration="1500">
+    <!-- <div class="text-center backto" data-aos="fade" data-aos-duration="1500">
       <a href="#" v-scroll-to="'#StorySection'">
         <icon name="backto" class="icon"></icon>
         Back to top
       </a>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -246,23 +246,44 @@ export default {};
   }
 }
 
-.backto a {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  color: #19204dbf;
-  opacity: 1;
-  text-decoration: none;
+// .backto a {
+//   text-align: center;
+//   font-size: 16px;
+//   font-weight: 500;
+//   letter-spacing: 0px;
+//   color: #19204dbf;
+//   opacity: 1;
+//   text-decoration: none;
 
-  .icon {
-    margin-bottom: 0.6rem;
-  }
-}
+//   .icon {
+//     margin-bottom: 0.6rem;
+//   }
+// }
 
 // small mobile
 @include mediaxm() {
   .layout {
+    height: 100%;
+    .first__section {
+      padding: 5rem 2.5rem;
+
+      .text {
+        h1 {
+          font-size: 1.7rem;
+        }
+        span {
+          h2 {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      .button {
+        .btn-md {
+          padding: 1rem 0rem;
+        }
+      }
+    }
     .contact__form {
       .box {
         .sm__box {
@@ -271,8 +292,10 @@ export default {};
         }
         .md__box {
           @include md__box();
+          max-width: 21.5rem;
+          padding: 3rem 2.5rem;
           top: 0rem;
-          left: 0.3rem;
+          left: 0.2rem;
         }
         .lg__box {
           @include lg__box();

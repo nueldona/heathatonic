@@ -127,10 +127,28 @@ export default {
 /****************
  mobile
 ***************/
+@include mediaxm() {
+  .hello {
+    p {
+      padding: 0rem 0.6rem;
+    }
+
+    .cross__svg {
+      display: none;
+    }
+  }
+  .section__body {
+    .img-2,
+    .img-3 {
+      margin: 20px 0px 20px 0px;
+    }
+  }
+}
 @include mediaSm {
   .hello {
     p {
       width: 90%;
+      padding: 0rem 0.6rem;
     }
 
     .cross__svg {

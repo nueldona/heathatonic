@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": "NoPath.png",
+    "title": "Dakwo PHC",
+    "state" : "Abuja",
+    "details": "Hospital beds, Incubator...."
+  },
+  {
+    "id": 2,
+    "img": "NoPath - Copy (17).png",
+    "title": "Aleyita PHC",
+    "state" : "Abuja",
+    "details": "Hospital beds, Incubator...."
+  },
+  {
+    "id": 3,
+    "img": "NoPath - Copy (18).png",
+    "title": "Badagry PHC",
+    "state" : "Lagos",
+    "details": "Hospital beds, Incubator...."
+  },
+  {
+    "id": 1,
+    "img": "NoPath.png",
+    "title": "Dakwo PHC",
+    "state" : "Abuja",
+    "details": "Hospital beds, Incubator...."
+  },
+  {
+    "id": 2,
+    "img": "NoPath - Copy (17).png",
+    "title": "Dakwo PHC",
+    "state" : "Abuja",
+    "details": "Hospital beds, Incubator...."
+  },
+  {
+    "id": 3,
+    "img": "NoPath - Copy (18).png",
+    "title": "Badagry PHC",
+    "state" : "Lagos",
+    "details": "Hospital beds, Incubator...."
+  }
+]

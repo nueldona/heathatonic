@@ -6,22 +6,51 @@
       ></router-link>
       <section class="main__content">
         <section class="info">
-          <h1>Welcome back</h1>
-          <small>Log in to continue</small>
+          <h1>Create an account</h1>
+          <small
+            >Let's create a virtual medical record for you, and help you access
+            great primary health care.</small
+          >
         </section>
         <section class="form">
           <form>
+            <div class="first__input">
+              <div class="form-group alt-form-group">
+                <input
+                  type="text"
+                  class="form__control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+                <label for="exampleFormControlInput1">first name</label>
+              </div>
+              <div class="form-group alt-form-group">
+                <input
+                  type="text"
+                  class="form__control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+                <label for="exampleFormControlInput1">last name</label>
+              </div>
+            </div>
             <div class="form-group">
               <input
-                type="text"
+                type="number"
                 class="form__control"
                 id="exampleFormControlInput1"
                 placeholder=""
-                v-on:click="display"
               />
-              <label for="exampleFormControlInput1" id="label"
-                >Email or Phone number</label
-              >
+              <label for="exampleFormControlInput1">Phone number</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form__control"
+                id="exampleFormControlInput1"
+                placeholder=""
+              />
+              <label for="exampleFormControlInput1">Email</label>
             </div>
             <div class="form-group">
               <input
@@ -29,7 +58,6 @@
                 class="form__control"
                 id="exampleFormControlInput1"
                 placeholder=""
-                v-on:click="display"
               />
               <label for="exampleFormControlInput1">Password</label>
             </div>
@@ -43,18 +71,17 @@
             <div class="accessbtn">
               <span
                 >New user?
-                <router-link to="/signUp" class="signin"
-                  >Sign up</router-link
+                <router-link to="/signIn" class="signin"
+                  >Log in</router-link
                 ></span
               >
               <button class="btn btn__sm">
-                Log In
+                Sign up
               </button>
             </div>
           </form>
           <span
-            ><small>Having troubles logging in? </small>
-            <a href="#">Contact support</a></span
+            ><small>Need help? </small> <a href="#">Contact support</a></span
           >
         </section>
       </section>
@@ -63,25 +90,17 @@
 </template>
 
 <script>
-// let input = document.querySelector("input");
-// let label = document.querySelector("#label");
-export default {
-  // methods: {
-  //   display: function() {
-  //     // alert("hello world");
-  //     if (input.value == " ") {
-  //       label.style.top = "17px";
-  //     } else if (input.value != " ") {
-  //       label.style.top = "-14px";
-  //     }
-  //   }
-  // }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
 @import "@/scss/colors.scss";
 @import "@/scss/mixins.scss";
+.first__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 article {
   width: 100%;
   height: 100%;
@@ -92,7 +111,7 @@ article {
     width: 100%;
     height: 100%;
     .navbar-brand {
-      margin-bottom: 5.5rem;
+      margin-bottom: 1.8rem;
     }
     .main__content {
       display: grid;
@@ -101,6 +120,7 @@ article {
         width: 100%;
         height: 100%;
         padding-top: 1rem;
+        margin-top: 4rem;
         h1 {
           @include text__lg__bold();
           margin-bottom: 1.5rem;
@@ -108,6 +128,8 @@ article {
 
         small {
           color: $secondaryColor;
+          display: block;
+          width: 70%;
           font-size: 1.1rem;
         }
       }
@@ -119,23 +141,25 @@ article {
           background: #ffffff 0% 0% no-repeat padding-box;
           box-shadow: 0px 6px 10px #19204d0f;
           border-radius: 1px;
-          padding: 4rem 3rem;
+          padding: 3.5rem 3rem;
           margin-bottom: 1rem;
           .form-group {
             position: relative;
             margin-bottom: 21px;
           }
 
-          .form-group:nth-child(2) {
+          .form-group:nth-child(4) {
             margin-bottom: 10px;
           }
 
           input[type="text"],
-          input[type="password"] {
+          input[type="password"],
+          input[type="number"],
+          input[type="email"] {
             @include input();
             &:focus + label {
               top: -14px;
-              font-size: 14px;
+              font-size: 12px;
               transition: 0.3s;
               color: #19204d;
               background: #fff;
@@ -145,6 +169,11 @@ article {
             }
           }
 
+          input[type="text"] {
+            width: 90%;
+            margin: 0px;
+          }
+
           label {
             position: absolute;
             left: 15px;
@@ -152,7 +181,7 @@ article {
             // transform: translate(-17px, -15px);
             padding: 0px 5px;
             color: #19204d80;
-            font-size: 17px;
+            font-size: 14px;
             transition: 0.3s;
           }
 
@@ -202,21 +231,40 @@ article {
     }
   }
 }
-// small size
+
+// mobile
 @include mediaxm() {
   article {
     main {
       .main__content {
+        .info {
+          h1 {
+            @include text__lg__bold();
+          }
+
+          small {
+            width: 90%;
+            font-size: 1rem;
+          }
+        }
         .form {
           form {
             padding: 4rem 2rem;
             input[type="text"],
-            input[type="password"] {
+            input[type="password"],
+            input[type="number"],
+            input[type="email"] {
               @include input();
               &:focus + label {
                 top: -14px;
                 font-size: 13px;
+                // height: 25px;
               }
+            }
+
+            input[type="text"] {
+              width: 90%;
+              margin: 0px;
             }
 
             label {
@@ -258,12 +306,10 @@ article {
 
 // desktop
 @media screen and (min-width: 756px) {
-  article {
-    main {
-      .main__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
+  main {
+    .main__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

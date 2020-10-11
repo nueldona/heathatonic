@@ -90,21 +90,21 @@
       </div>
     </div>
 
-    <HeroSection />
+    <!-- <HeroSection /> -->
   </div>
 </template>
 
 <script>
 import { vSwitch, vCase, vDefault } from "v-switch-case";
-import HeroSection from "@/components/HeroSection";
+// import HeroSection from "@/components/HeroSection";
 let photos = {
   bg__img: require("@/assets/Mask Group 1@2x.png"),
   img__2: require("@/assets/Mask Group 28.png")
 };
 export default {
-  components: {
-    HeroSection
-  },
+  // components: {
+  //   HeroSection
+  // },
   directives: {
     switch: vSwitch,
     case: vCase,
@@ -129,6 +129,10 @@ export default {
 @import "@/scss/mixins.scss";
 a {
   text-decoration: none;
+}
+
+.navbar {
+  padding: 1.2rem 0rem;
 }
 
 .header {
@@ -188,7 +192,7 @@ a {
 //
 @include altmediaLg() {
   .navbar {
-    padding: 0.5rem 0rem;
+    padding: 1rem 0rem;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 0.8rem !important;

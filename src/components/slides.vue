@@ -226,7 +226,7 @@ img {
 // small mobile
 @include mediaxm() {
   .main {
-    width: 26.75rem;
+    width: 21rem;
     .header {
       padding: 0.8rem 1.5rem;
       border-top: 2px dashed $btnColor;
@@ -240,8 +240,15 @@ img {
         padding: 0.5rem 0.5rem;
         .card-title {
           @include text__md();
-          font-size: 1rem;
+          font-size: 0.9rem;
           font-weight: 600;
+        }
+        .text-small {
+          font-size: 0.7rem;
+          font-style: normal;
+        }
+        .srt {
+          font-size: 0.8rem;
         }
       }
     }

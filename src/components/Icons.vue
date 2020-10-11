@@ -936,12 +936,60 @@
         transform="translate(5.633 2.816)"
       />
     </svg>
+
+    <!-- thirty -->
+    <svg
+      v-if="name === 'bigCupid'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="340.355"
+      height="257.723"
+      viewBox="0 0 460.355 387.723"
+    >
+      <defs></defs>
+      <path
+        class="a30"
+        d="M664.053,404.547c-114.492-54.324-166.57,61.564-170.442,70.625-3.871-9.061-55.948-124.948-170.441-70.625C204.108,461,264.122,641.276,493.379,777.567v.271l.232-.116.233.116v-.271C723.1,641.276,783.114,461,664.053,404.547Z"
+        transform="translate(-263.433 -390.115)"
+      />
+    </svg>
+
+    <!-- thirty-one -->
+    <svg
+      v-if="name === 'DonateCross'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="365.811"
+      height="320.809"
+      viewBox="0 0 536.811 536.809"
+    >
+      <defs></defs>
+      <path
+        class="a1"
+        d="M817,520.187H623v-194H474.182v194h-194V669.005h194V863H623V669.005H817Z"
+        transform="translate(-280.186 -326.191)"
+      />
+    </svg>
+
+    <!-- thirty two -->
+    <svg
+      v-if="name === 'arrowDir'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="11.812"
+      height="18.882"
+      viewBox="0 0 11.812 18.882"
+    >
+      <defs></defs>
+      <path
+        class="a"
+        d="M12.517,15.077l7.517-7.343-2.147-2.1L8.222,15.077l9.665,9.441,2.147-2.1Z"
+        transform="translate(-8.222 -5.636)"
+      />
+    </svg>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["name"],
+  props: ["name"]
 };
 </script>
 
@@ -1214,5 +1262,16 @@ tenth fill */
 }
 .b29 {
   fill: #fba91d;
+}
+
+/* thirty */
+.a30 {
+  fill: rgba(25, 32, 77, 0.2);
+  opacity: 0.11;
+}
+
+/* thirty two */
+.a {
+  fill: #19204d;
 }
 </style>

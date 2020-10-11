@@ -3,13 +3,13 @@
     <div class="team__members w-100 h-100">
       <div class="container">
         <div
-          v-for="TeamDetail in allTeamDetails"
-          v-bind:key="TeamDetail.id"
+          v-for="team__member in team__members"
+          v-bind:key="team__member.id"
           class="team__member"
         >
           <div class="team__id col-lg-5">
             <img
-              :src="require('@/assets/' + TeamDetail.img)"
+              :src="require('@/assets/' + team__member.img)"
               alt="profile pictures"
               data-aos="zoom-out"
               data-aos-anchor=".anchor"
@@ -22,21 +22,21 @@
               data-aos-easing="ease"
               data-aos-duration="1000"
             >
-              {{ TeamDetail.title }}
+              {{ team__member.title }}
             </h1>
             <p
               data-aos="slide-up"
               data-aos-easing="ease"
               data-aos-duration="1100"
             >
-              {{ TeamDetail.position }}
+              {{ team__member.position }}
             </p>
             <p
               data-aos="slide-up"
               data-aos-easing="ease"
               data-aos-duration="1200"
             >
-              {{ TeamDetail.details }}
+              {{ team__member.details }}
             </p>
             <button
               class="btn btn__md"
@@ -55,29 +55,36 @@
 
 <script>
 // eslint-disable-next-line no-unused-vars
-import { mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 export default {
   name: "cards",
-  computed: {
-    ...mapGetters(["allTeamDetails"])
-  }
-  // mounted() {
-  //   this.fetchData();
-  // },
-  // data() {
-  //   return {
-  //     team__members: []
-  //   };
+  // computed: {
+  //   // ...mapGetters(["allTeamDetails"])
+  //   ...mapState(['team__members'])
   // },
   // methods: {
-  //   async fetchData() {
-  //     // eslint-disable-next-line no-unused-vars
-  //     const res = await fetch("teamDetails.json");
-  //     // eslint-disable-next-line no-unused-vars
-  //     const val = await res.json();
-  //     this.team__members = val;
-  //   }
+  //   ...mapActions(["fetchTeamDetails"])
+  // },
+  // created() {
+  //   this.fetchTeamDetails();
   // }
+  mounted() {
+    this.fetchData();
+  },
+  data() {
+    return {
+      team__members: []
+    };
+  },
+  methods: {
+    async fetchData() {
+      // eslint-disable-next-line no-unused-vars
+      const res = await fetch("teamDetails.json");
+      // eslint-disable-next-line no-unused-vars
+      const val = await res.json();
+      this.team__members = val;
+    }
+  }
 };
 </script>
 

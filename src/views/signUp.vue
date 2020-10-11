@@ -1,12 +1,14 @@
 <template>
-  <div class="About"></div>
+  <signUp />
 </template>
 
 <script>
 // @ is an alias to /src
-
+import signUp from "@/components/signUp";
 export default {
   name: "Home",
-  components: {}
+  components: {
+    signUp
+  }
 };
 </script>
