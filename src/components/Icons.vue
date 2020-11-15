@@ -984,6 +984,101 @@
         transform="translate(-8.222 -5.636)"
       />
     </svg>
+
+    <!-- thirty two -->
+    <svg
+      v-if="name === 'arrow_right'"
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+    >
+      <path d="M0 0h24v24H0V0z" fill="none" />
+      <path d="M10 17l5-5-5-5v10z" />
+    </svg>
+
+    <!-- thirty three -->
+    <svg
+      v-if="name === 'range'"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 560 7"
+    >
+      <defs></defs>
+      <g transform="translate(-160 -759)">
+        <rect
+          class="a33"
+          width="560"
+          height="7"
+          rx="3.5"
+          transform="translate(160 759)"
+        />
+        <rect
+          class="b33"
+          width="240"
+          height="7"
+          rx="3.5"
+          transform="translate(160 759)"
+        />
+      </g>
+    </svg>
+
+    <!-- thirty four -->
+    <svg
+      v-if="name === 'moneyRec'"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <defs></defs>
+      <path class="a34" d="M0,0H24V24H0Z" />
+      <path
+        class="b34"
+        d="M5,9a1,1,0,0,1,1,1,6.97,6.97,0,0,1,4.33,1.5H12.5A4.49,4.49,0,0,1,15.854,13H19a5,5,0,0,1,4.516,2.851A13.154,13.154,0,0,1,13,21a14.447,14.447,0,0,1-7.06-1.658A1,1,0,0,1,5,20H2a1,1,0,0,1-1-1V10A1,1,0,0,1,2,9Zm1,3v5.022l.045.032A11.9,11.9,0,0,0,13,19a11.232,11.232,0,0,0,7.835-3.13l.133-.133-.12-.1a2.994,2.994,0,0,0-1.643-.63L19,15H16.889A4.574,4.574,0,0,1,17,16v1H8V15h6.79l-.034-.078A2.5,2.5,0,0,0,12.664,13.5l-.164,0H9.57A4.985,4.985,0,0,0,6,12ZM4,11H3v7H4ZM18,5a3,3,0,1,1-3,3A3,3,0,0,1,18,5Zm0,2a1,1,0,1,0,1,1A1,1,0,0,0,18,7ZM11,2A3,3,0,1,1,8,5,3,3,0,0,1,11,2Zm0,2a1,1,0,1,0,1,1A1,1,0,0,0,11,4Z"
+      />
+    </svg>
+
+    <!-- thirty five -->
+    <svg
+      v-if="name === 'scrollDown'"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 44 44"
+    >
+      <defs></defs>
+      <path class="a35" d="M0,0H44V44H0Z" />
+      <path
+        class="b35"
+        d="M15.039,5.437c-2.446,0-3.69.29-4.836.971A5.672,5.672,0,0,0,7.965,8.9a11.587,11.587,0,0,0-.873,5.373v9.826a11.6,11.6,0,0,0,.873,5.375A5.669,5.669,0,0,0,10.2,31.958c1.144.68,2.39.971,4.836.971H17.7c2.446,0,3.69-.29,4.836-.971a5.672,5.672,0,0,0,2.238-2.488,11.59,11.59,0,0,0,.873-5.375V14.269a11.6,11.6,0,0,0-.873-5.375,5.672,5.672,0,0,0-2.238-2.488c-1.144-.679-2.39-.969-4.834-.969H15.038Zm0-3.437H17.7c3.113,0,4.783.478,6.295,1.376a8.956,8.956,0,0,1,3.506,3.9c.809,1.681,1.238,3.536,1.238,7V24.1c0,3.461-.43,5.317-1.238,7a8.956,8.956,0,0,1-3.506,3.9c-1.512.9-3.181,1.376-6.295,1.376H15.038c-3.113,0-4.783-.478-6.295-1.376a8.956,8.956,0,0,1-3.506-3.9C4.43,29.413,4,27.557,4,24.1V14.269c0-3.461.43-5.317,1.238-7a8.955,8.955,0,0,1,3.508-3.9C10.256,2.478,11.926,2,15.039,2Zm-.218,6.873h3.092v8.592H14.821Z"
+        transform="translate(5.633 2.816)"
+      />
+    </svg>
+
+    <!-- thirty six -->
+    <svg
+      v-if="name === 'brokenCross'"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 348.189 342"
+    >
+      <defs></defs>
+      <g transform="translate(-585.905 -1364.5)">
+        <line class="a36" y2="337" transform="translate(739 1367)" />
+        <line
+          class="a36"
+          y2="343.189"
+          transform="translate(931.595 1514.5) rotate(90)"
+        />
+        <line class="a36" y2="337" transform="translate(760 1367)" />
+        <line
+          class="a36"
+          y2="343.189"
+          transform="translate(931.595 1535.5) rotate(90)"
+        />
+        <line class="a36" y2="337" transform="translate(781 1367)" />
+        <line
+          class="a36"
+          y2="343.189"
+          transform="translate(931.595 1556.5) rotate(90)"
+        />
+      </g>
+    </svg>
   </div>
 </template>
 
@@ -1273,5 +1368,39 @@ tenth fill */
 /* thirty two */
 .a {
   fill: #19204d;
+}
+
+/* thirty three */
+.a33 {
+  fill: rgba(251, 169, 29, 0.29);
+  opacity: 0.54;
+}
+.b33 {
+  fill: #fba91d;
+}
+
+/* thirty four */
+.a34 {
+  fill: none;
+}
+.b34 {
+  fill: #fba91d;
+}
+
+/* thirty five */
+.a35 {
+  fill: none;
+}
+.b35 {
+  fill: #19204d;
+}
+
+/* thirty six */
+.a36 {
+  fill: none;
+  stroke: #fba91d;
+  stroke-linecap: round;
+  stroke-width: 5px;
+  stroke-dasharray: 16;
 }
 </style>

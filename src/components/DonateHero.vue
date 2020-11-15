@@ -43,12 +43,18 @@
                     v-for="item in items"
                     :key="item"
                   >
-                    <img :src="require('@/assets/' + item.img)" />
+                    <img
+                      :src="require('@/assets/' + item.img)"
+                      alt="image"
+                      loading="lazy"
+                    />
                     <div class="card-carousel--card--footer">
                       <h1>{{ item.title }}</h1>
                       <h2>{{ item.state }}</h2>
                       <p>{{ item.details }}</p>
-                      <button class="btn btn__xm">Details</button>
+                      <router-link class="btn btn__xm" to="/DonateDetails"
+                        >Details</router-link
+                      >
                     </div>
                   </div>
                 </div>
@@ -71,7 +77,7 @@
         <DonateButton />
       </section>
 
-      <section class="fourth__layer">
+      <section class="fourth__layer mt-5">
         <div class="fourth__layer-content">
           <div class="card-carousel-cards">
             <section class="first__section">
@@ -80,12 +86,18 @@
                 v-for="item in items"
                 :key="item"
               >
-                <img :src="require('@/assets/' + item.img)" />
+                <img
+                  :src="require('@/assets/' + item.img)"
+                  loading="lazy"
+                  alt="image"
+                />
                 <div class="card-carousel--card--footer">
                   <h1>{{ item.title }}</h1>
                   <h2>{{ item.state }}</h2>
                   <p>{{ item.details }}</p>
-                  <button class="btn btn__xm">Details</button>
+                  <router-link to="/DonateDetails" class="btn btn__xm"
+                    >Details</router-link
+                  >
                 </div>
               </div>
             </section>
@@ -95,12 +107,18 @@
                 v-for="item in items"
                 :key="item"
               >
-                <img :src="require('@/assets/' + item.img)" />
+                <img
+                  :src="require('@/assets/' + item.img)"
+                  loading="lazy"
+                  alt="image"
+                />
                 <div class="card-carousel--card--footer">
                   <h1>{{ item.title }}</h1>
                   <h2>{{ item.state }}</h2>
                   <p>{{ item.details }}</p>
-                  <button class="btn btn__xm">Details</button>
+                  <router-link class="btn btn__xm" to="/DonateDetails">
+                    Details
+                  </router-link>
                 </div>
               </div>
             </section>

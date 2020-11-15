@@ -210,7 +210,10 @@ export default {
     makeActive: function() {
       this.IsActive = !this.IsActive;
     }
-  }
+  },
+  // computed : {
+    
+  // }
 };
 </script>
 
@@ -296,7 +299,6 @@ main {
   }
 
   main {
-    
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     section {
